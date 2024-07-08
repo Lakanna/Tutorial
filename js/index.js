@@ -32,11 +32,8 @@
 // const message = "JavaScript is awesome!";
 // alert(message);
 
-
 // const isComing = confirm("Please confirm hotel reservation");
 // console.log(isComing);
-
-
 
 // const hotelName = prompt("Please enter desired hotel name");
 // console.log(hotelName);
@@ -318,27 +315,15 @@
 // 450 покаже 07:30
 // 1441 покаже 24:01
 
+// const totalMinutes = 1441;
 
-const totalMinutes = 1441;
+// const hours = Math.floor(totalMinutes / 60);
+// const minuts = totalMinutes % 60;
+// const result = `${hours.toString().padStart(2, "0")} : ${minuts.toString().padStart(2, "0")}`;
 
-const hours = Math.floor(totalMinutes / 60);
-const minuts = totalMinutes % 60;
-const result = `${hours.toString().padStart(2, "0")} : ${minuts.toString().padStart(2, "0")}`;
-
-
-
-
-console.log(hours);
-console.log(minuts);
-console.log(result);
-
-
-
-
-
-
-
-
+// console.log(hours);
+// console.log(minuts);
+// console.log(result);
 
 // const hours = Math.floor(totalMinutes / 60);
 // const minuts = totalMinutes % 60;
@@ -397,8 +382,6 @@ console.log(result);
 // console.log(slugify("Ten secrets of JavaScript"));
 // console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
 
-
-
 // function getCommonElements(array1, array2) {
 //   // Change code below this line
 // let newArr = [];
@@ -452,7 +435,6 @@ console.log(result);
 // bookShelf.getBooks();
 // bookShelf.addBook("Нова книга");
 
-
 // const highTemperatures = {
 //   yesterday: 28,
 //   today: 26,
@@ -461,7 +443,6 @@ console.log(result);
 // // Change code below this line
 
 // const { yesterday: highYesterday, today: highToday, tomorrow: highTomorrow, highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg" } = highTemperatures;
-
 
 // // Change code above this line
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
@@ -476,7 +457,7 @@ console.log(result);
 //     // console.log(args[i]);
 //     sumElement = sumElement + args[i];
 //   }
-  
+
 //   return sumElement;
 //   // Change code above this line
 // }
@@ -497,7 +478,6 @@ console.log(result);
 // };
 // console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
 
-
 // const atTheOldToad = {
 //   potions: ["Speed potion", "Dragon breath", "Stone skin"],
 //   // Change code below this line
@@ -506,8 +486,6 @@ console.log(result);
 //   },
 //   // Change code above this line
 // };
-
-
 
 // const pizzaPalace = {
 //   pizzas: ["Ultracheese", "Smoked", "Four meats"],
@@ -540,11 +518,10 @@ console.log(result);
 // pizzaPalace.order("Big Mike", makePizza, onOrderError);
 // pizzaPalace.order("Vienna", makePizza, onOrderError);
 
-
 // const pizzaPalace = {
 //   pizzas: ["Ultracheese", "Smoked", "Four meats"],
 //   order(pizzaName, onSuccess, onError) {
-    
+
 //     if (this.pizzas.includes(pizzaName)) {
 //       console.log(onSuccess(pizzaName))
 //     return onSuccess(pizzaName);
@@ -562,11 +539,10 @@ console.log(result);
 //       commonElements.push(elem);
 //    };
 //    })
-  
+
 //   return commonElements;
 //   // Change code above this line
 // }
-
 
 // function getCommonElements(firstArray, secondArray) {
 //   const commonElements = [];
@@ -577,8 +553,6 @@ console.log(result);
 //   };
 // });
 
-  
-
 //   // for (let i = 0; i < firstArray.length; i += 1) {
 //   //   if (secondArray.includes(firstArray[i])) {
 //   //     commonElements.push(firstArray[i]);
@@ -588,7 +562,6 @@ console.log(result);
 //   return commonElements;
 //   // Change code above this line
 // }
-
 
 // const filterArray = (numbers, value) => {
 //   const filteredNumbers = [];
@@ -620,10 +593,9 @@ console.log(result);
 //       return;
 //     }
 //     newArr.push(number);
-    
+
 //   });
 
-  
 //   // for (let i = 0; i < numbers.length; i += 1) {
 //   //   if (numbers[i] % 2 === 0) {
 //   //     numbers[i] = numbers[i] + value;
@@ -634,8 +606,6 @@ console.log(result);
 // }
 // console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
 // console.log()
-
-
 
 // const users = [
 //   {
@@ -718,9 +688,9 @@ console.log(result);
 // ];
 
 // const getUserNames = users.map((user) => {
-  
+
 //   return user.name;
-// }); 
+// });
 // console.log(getUserNames);
 
 // const getUsersWithAge = (users, minAge, maxAge) => {
@@ -729,7 +699,6 @@ console.log(result);
 
 // };
 // console.log(getUsersWithAge(users, 20, 30));
-
 
 // const users = [
 //   {
@@ -805,7 +774,7 @@ console.log(result);
 // ];
 // const getUsersWithFriend = (users, friendName) => {
 //   const withFriend = users.filter(({friends}) => friends.includes(friendName)
-                 
+
 //    );
 //     return withFriend;
 // };
@@ -864,7 +833,6 @@ console.log(result);
 //    };
 //   }
 // }
-
 
 // // Change code above this line
 // const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
@@ -934,7 +902,7 @@ console.log(result);
 //     this.email = newEmail;
 //   }
 // }
-// 
+//
 // Change code below this line
 // function add(a,b,c) {
 //   let result = a + b + c;
@@ -946,3 +914,153 @@ console.log(result);
 // add(10, 20, 30);
 // add(5, 10, 15);
 // console.log(object);
+
+// Task - 1
+// Потрібно створити світлофор використовуючи конструкцію switch
+// В propmt() юзер вводить колір який він бачить на світлофорі
+// В результаті виконання юзер має отримати повідомлення з дією яку має виконати
+
+// Можливі 4 стани світлофора
+// 1 - red, action stop
+// 2 - yellow, action ready
+// 3 - green, action go
+// 4 - Будь-який інший колір або значення відповідно світлофор не працює, action be careful
+
+// let message = prompt("Color?");
+// let action;
+
+// if (message) {
+//   message = message.toLowerCase();
+// }
+
+// switch (message) {
+//   case "red":
+//     action = "Stop";
+//     break;
+//   case "yellow":
+//     action = "Ready";
+//     break;
+
+//   case "green":
+//     action = "Go";
+//     break;
+
+//   default:
+//     action = "Be careful";
+   
+// }
+
+// console.log(action);
+
+
+
+
+
+// let message = prompt("Color?");
+// let action;
+
+// if(message){
+//     message = message.toLowerCase();
+// }
+
+// switch (message) {
+//   case "red":
+//     action = "Stop";
+//     break;
+//   case "yellow":
+//     action = "Ready";
+//     break;
+//   case "green":
+//     action = "Go";
+//     break;
+//   default:
+//     action = "Be careful";
+// }
+
+// console.log(action);
+
+
+// Task - 2
+// Потрібно створити застосунок для автоматизації перевірки правильних відповідей на дитячі загадки
+// Створи функцію яка буде приймати 2 параметри
+// 1 параметр це текст загадки
+// 2 вірна відповідь
+
+// Після виклику функції користувач має побачити питання на екрані та поле для вводу відповіді, використовуй propmt()
+// Функція має повертати булеве значення з результатом відповіді (true/false)
+
+// function check(text, answer) {
+// let message = prompt(text);
+
+// if(message){
+//  message = message.toLowerCase();
+// }
+
+// return message === answer;
+// }
+
+
+// // console.log(
+// //   check("Хоч не літак, а крилатий, Без крил не може працювати.", "вітряк")
+// // );
+// console.log(check('Через воду він проводить, А сам з місця вік не сходить', 'міст'));
+
+
+
+// Task - 3
+// Потрібно створити функцію яка буде рахувати за скільки днів Равлик зможе виповзти з колодязя
+// функція приймає 1 параметр глибину колодязя, функція повертає кількість днів яку равлик витратив на шлях.
+// за день Равлик проповзає на 7 м в гору, а за ніч опускається на 2 м в низ
+// для вирішення завдання використовуй цикл while
+
+// 42 м, виповзе за 8 днів
+// 17 м, виповзе за 3 дні
+// 18 м, виповзе за 4 дні
+
+// function getDays(deps) {
+// const nightSpeed = 2;
+// const daySpeed = 7;
+// let totalDays = 0;
+// let totalWay = 0;
+
+// while (deps > totalWay) {
+//   totalDays +=1;
+//   totalWay += daySpeed;
+
+//   if (totalWay < deps) {
+//     totalWay -= nightSpeed;    
+//   }
+  
+// }
+// return totalDays;
+// }
+// console.log(getDays(18));
+ // 8
+// getDays(17) // 3
+// getDays(18) // 4
+
+
+
+// / Task - 4
+// Порахуй скільки голосних літер у реченні.
+
+function countVowel(str) {
+const vowels = "aeiou"
+let total = 0;
+// str = str.toLowerCase();
+// str = str.toLoverCase();
+
+str = str.toLowerCase();
+
+for (let i = 0; i < str.length; i +=1) {
+ if (vowels.includes(str[i])) {
+   total += 1;
+ }
+   
+};
+return total;
+
+}
+
+// console.log(countVowel("HELLO WORLD")); // 3
+console.log(countVowel("Junior Web Developer")); // 8
