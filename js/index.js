@@ -319,9 +319,18 @@
 // 1441 покаже 24:01
 
 
-const totalMinutes = 450;
-const hours = totalMinutes / 60;
+const totalMinutes = 1441;
+
+const hours = Math.floor(totalMinutes / 60);
+const minuts = totalMinutes % 60;
+const result = `${hours.toString().padStart(2, "0")} : ${minuts.toString().padStart(2, "0")}`;
+
+
+
+
 console.log(hours);
+console.log(minuts);
+console.log(result);
 
 
 
@@ -331,15 +340,9 @@ console.log(hours);
 
 
 
-
-
-
-
-
-
-
-
-
+// const hours = Math.floor(totalMinutes / 60);
+// const minuts = totalMinutes % 60;
+// const result = `${hours.toString().padStart(2, '0')} : ${minuts.toString().padStart(2, '0')}`;
 
 // const totalMinutes = 450;
 // const hours = Math.floor(totalMinutes / 60);
