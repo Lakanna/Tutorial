@@ -1044,23 +1044,23 @@
 // / Task - 4
 // Порахуй скільки голосних літер у реченні.
 
-function countVowel(str) {
-const vowels = "aeiou"
-let total = 0;
+// function countVowel(str) {
+// const vowels = "aeiou"
+// let total = 0;
+// // str = str.toLowerCase();
+// // str = str.toLoverCase();
+
 // str = str.toLowerCase();
-// str = str.toLoverCase();
 
-str = str.toLowerCase();
-
-for (let i = 0; i < str.length; i +=1) {
- if (vowels.includes(str[i])) {
-   total += 1;
- }
+// for (let i = 0; i < str.length; i +=1) {
+//  if (vowels.includes(str[i])) {
+//    total += 1;
+//  }
    
-};
-return total;
+// };
+// return total;
 
-}
+// }
 
 // console.log(countVowel("HELLO WORLD")); // 3
-console.log(countVowel("Junior Web Developer")); // 8
+// console.log(countVowel("Junior Web Developer")); // 8
