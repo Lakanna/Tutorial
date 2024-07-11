@@ -1321,8 +1321,6 @@
 // removeCourse(name) - видаляє курс із колекції
 // updateCourse(oldName, newName) - змінює ім'я на нове
 
-
-
 // function addCourse(name) {
 //   if (courses.includes(name)) {
 //     return "Ви вже маєте такий курс";
@@ -1347,19 +1345,51 @@
 // }
 // removeCourse("Hpluj");
 // console.log(courses);
-const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 
-function updateCourse(oldName, newName) {
-  if (courses.includes(oldName) && !courses.includes(newName)) {
-    let idx = courses.indexOf(oldName);
-    courses.splice(idx, 1, newName);
-  } else if (!courses.includes(oldName)) {
-    console.log("Курс з таким ім*ям не знайдено");
-  } else {
-    console.log("Ви вже вивчаєте такий курс");
+// function updateCourse(oldName, newName) {
+//   if (courses.includes(oldName) && !courses.includes(newName)) {
+//     let idx = courses.indexOf(oldName);
+//     courses.splice(idx, 1, newName);
+//   } else if (!courses.includes(oldName)) {
+//     console.log("Курс з таким ім*ям не знайдено");
+//   } else {
+//     console.log("Ви вже вивчаєте такий курс");
+//   }
+// }
+// updateCourse("HTML", "JavaScript");
+// // updateCourse("qwerty", "NestJS");
+// // updateCourse("qwerty", "qwe")
+// console.log(courses);
+
+// function includes(array, value) {
+//   // Change code below this line
+//   let result = false;
+//   for (let el of array) {
+//     if (el === value) {
+//       result = true;
+//     }
+//   }
+//   return result;
+//   // Change code above this line
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(
+//   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+// );
+
+const book = {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["historical prose", "adventure"],
+    rating: 8.38,
+  };
+  
+  for (const key in book) {
+    // Ключ
+    console.log(key);
+    // Значення властивості з таким ключем
+    console.log(book[key]);
   }
-}
-updateCourse("HTML", "JavaScript");
-// updateCourse("qwerty", "NestJS");
-// updateCourse("qwerty", "qwe")
-console.log(courses);
