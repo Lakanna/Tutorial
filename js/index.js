@@ -947,14 +947,10 @@
 
 //   default:
 //     action = "Be careful";
-   
+
 // }
 
 // console.log(action);
-
-
-
-
 
 // let message = prompt("Color?");
 // let action;
@@ -979,7 +975,6 @@
 
 // console.log(action);
 
-
 // Task - 2
 // Потрібно створити застосунок для автоматизації перевірки правильних відповідей на дитячі загадки
 // Створи функцію яка буде приймати 2 параметри
@@ -999,13 +994,10 @@
 // return message === answer;
 // }
 
-
 // // console.log(
 // //   check("Хоч не літак, а крилатий, Без крил не може працювати.", "вітряк")
 // // );
 // console.log(check('Через воду він проводить, А сам з місця вік не сходить', 'міст'));
-
-
 
 // Task - 3
 // Потрібно створити функцію яка буде рахувати за скільки днів Равлик зможе виповзти з колодязя
@@ -1028,18 +1020,16 @@
 //   totalWay += daySpeed;
 
 //   if (totalWay < deps) {
-//     totalWay -= nightSpeed;    
+//     totalWay -= nightSpeed;
 //   }
-  
+
 // }
 // return totalDays;
 // }
 // console.log(getDays(18));
- // 8
+// 8
 // getDays(17) // 3
 // getDays(18) // 4
-
-
 
 // / Task - 4
 // Порахуй скільки голосних літер у реченні.
@@ -1056,7 +1046,7 @@
 //  if (vowels.includes(str[i])) {
 //    total += 1;
 //  }
-   
+
 // };
 // return total;
 
@@ -1064,3 +1054,312 @@
 
 // console.log(countVowel("HELLO WORLD")); // 3
 // console.log(countVowel("Junior Web Developer")); // 8
+
+// Task-1
+// Напиши скрипт який буде перебирати масив та видаляти з нього (мутувати) всі елементи що не є типом даних Number.
+
+// const arr = [3, "Hello", null, 42, false];
+
+// for (let i = arr.length - 1; i >= 0; i-=1) {
+
+//     if (typeof arr[i] !== "number"){
+
+//         console.log(arr[i]);
+//          arr.splice(i, 1);
+//     }
+
+// }
+
+// console.log(arr);
+
+// for (let i = arr.length - 1; i >= 0; i-=1) {
+
+//     if(typeof arr[i] !== "boolean") {
+//         console.log(arr[i]);
+// arr.splice(i, 1)
+//     }
+
+// }
+// console.log(arr);
+
+// Task-2
+// Потрібно створити функцію яка буде приймати 1 параметр
+// Функція повина відібрати з масиву тільки ті елементи що дублюються в ньому та повернути їх в вигляді нового масиву як результат виконання функції
+
+// function getCommonElements(arr) {
+//   const result = [];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr.includes(arr[i], i + 1)) {
+//       if (!result.includes(arr[i])) {
+//         result.push(arr[i]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// function getCommonElements(arr) {
+//       const result = [];
+//       for (let i = 0; i < arr.length; i += 1) {
+//         if (arr.includes(arr[i], i + 1)) {
+//           // console.log(`${arr[i]} - ${arr.includes(arr[i])}`);
+//         //   if (!result.includes(arr[i])) {
+//             result.push(arr[i]);
+//         //   }
+//         }
+//       }
+
+//       return result;
+//     }
+
+//
+
+// function getCommonElements(arr) {
+// const result = [];
+
+// for (let i = 0; i < arr.length; i+=1) {
+
+//     if(arr.includes(arr[i], i + 1)){
+//         if(!result.includes(arr[i])){
+//             result.push(arr[i]);
+//         };
+//     };
+//   }
+//  return result;
+// }
+// console.log(getCommonElements([1, 2, 3, 2, 1, 1, 1, 1, 17, 19]));
+
+// Task-3
+//Потрібно створити функцію яка буде приймати 2 параметри
+//1 параметр це масив всіх юзерів
+//2 параметр це масив з чоловічими іменами.
+//Функція повина відібрати з масиву всіх юзерів лише жіночі імена та повернути їх в результаті свого виканання.
+
+// const users = [
+//     "Artem",
+//     "Anna",
+//     "Larisa",
+//     "Maksim",
+//     "Svetlana",
+//     "David",
+//     "Roman",
+//     "Olga",
+//   ];
+
+//   // console.table(users);
+//   const men = ["Artem", "Maksim", "David", "Roman"];
+
+//   function getWomen(users, men) {
+// const women = [];
+// for (const user of users) {
+//     if(!men.includes(user)){
+//         women.push(user)
+//     }
+//     }
+// return women;
+//   }
+
+//   console.log(getWomen(users, men));
+
+// Task-4 - Масиви та рядки
+// Напиши скрипт, який «розгортає» рядок (зворотний порядок літер) і виводить його в консоль.
+
+// const string = 'Welcome to the future';
+// const SEPARATOR = "";
+
+// const result = string.split(SEPARATOR).reverse().join(SEPARATOR);
+
+// console.log(result);
+
+// Task-5
+// Напиши скрипт який буде перевіряти чи елементи в масиві розташовані в порядку зростання,
+// якщо ні то замінювати елементи на вірнi
+// const numbers = [1, 2, 3, 1, 5, 6, 1, 1, 9];
+
+// for (let i = 1; i < numbers.length; i+= 1) {
+//   const curentEl = numbers[i];
+//   const prevEl = numbers[i - 1];
+
+//   if(curentEl - prevEl !== 1){
+//     numbers[i] = prevEl + 1;
+//   }
+
+// }
+
+// console.log(numbers);
+// for(let i = 1; i < numbers.length; i +=1){
+// let currentNumber = numbers[i];
+// let prevNumber = numbers[i - 1];
+// console.log(currentNumber, prevNumber);
+
+// if(currentNumber - prevNumber !==1){
+//     numbers[i] = prevNumber + 1;
+// }
+// }
+
+// Task-6
+// Напиши функцію яка на основі масиву користувачів що поставили лайк формує та повертає рядок.
+// Функцію має повернути текст, як вказано у прикладах:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+// function createStr(arr) {
+//   let result = "";
+
+//   switch (arr.length) {
+//     case 0:
+//       result = "no one likes this";
+//       break;
+//     case 1:
+//       result = `${arr[0]} likes this`;
+//       break;
+//     case 2:
+//       result = `${arr[0]} and ${arr[1]} like this`;
+//       break;
+//     case 3:
+//       result = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`;
+//       break;
+
+//     default:
+//       result = `${arr[0]}, ${arr[1]} and ${arr.length - 2} others like this`;
+//       break;
+//   }
+//   return result;
+// }
+// console.log(createStr([]));
+// console.log(createStr(["Peter"]));
+// console.log(createStr(["Jacob", "Alex"]));
+// console.log(createStr(["Max", "John", "Mark"]));
+// console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));
+
+// let result = "";
+// switch (arr.length) {
+//   case 0:
+//     result = `No one likes this`;
+//     break;
+//   case 1:
+//     result = `${arr[0]} likes this`;
+//     break;
+//   case 2:
+//     result = `${arr[0]} and ${arr[1]} like this`;
+//     break;
+//   case 3:
+//     result = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`;
+//     break;
+//   default:
+//     result = `${arr[0]}, ${arr[1]} and ${arr.length - 2} others like this`;
+
+// }
+
+// return result;
+
+// Task-1;
+// Створи функцію яка буде перевіряти чи кожен елемент масиву більше ніж вказане значення. Функція приймає два параметри.
+// 1 - Масив чисел
+// 2 - Число яке потрібно порівнювати з усіма елементами масиву.
+// Функція повертає повідомлення про успішну або не успішну перевірку (повідомлення "Success ✅" "Fail ❌")
+
+// const numbers = [25, 12, 67, 40, 18];
+
+//     function checkValue(arr, targetValue) {
+//         let message = "Success ✅";
+
+//        for (const currValue of arr) {
+//         if(currValue <= targetValue){
+//             message = "Fail ❌";
+//             return message;
+//         }
+//        }
+//        return message;
+//     }
+
+// console.log(checkValue(numbers, 12));
+
+// Task-2
+// Створити функцію яка буде розбивати початковий масив на потрібну кількість елементів розділюячи на декілька масивів.Функція приймає 2 параметри
+// 1 - масив значень
+// 2 - потрібну кількість елементів в масиві
+//  Функція повертає масив масивів
+
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// function getCombination(data, count) {
+// const arr = [];
+
+// for(let i = 0; i < data.length; i += count){
+//     console.log(i);
+//     const arrEl = data.slice(i, i + count);
+//     arr.push(arrEl);
+// }
+// return arr;
+//  }
+// console.log(getCombination(data, 2)); // [[1, 2], [3, 4],[5, 6],[7, 8]]
+// console.log(getCombination(data, 3)); // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+// Example 3 - Площа прямокутника
+// Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядка. Значення гарантовано розділені пробілом.
+
+// function getRectArea(dimensions) {
+//   arr = dimensions.split(" ");
+//   console.log(arr);
+//   let valueA = Number(arr[0]);
+//   let valueB = Number(arr[1]);
+//   return valueA * valueB;
+// }
+
+// console.log(getRectArea("8 11"));
+// console.log(getRectArea("15 11"));
+
+// Task-4
+// Напишіть функції для роботи з колекцією навчальних курсів courses:
+
+// addCourse(name) - додає курс до кінця колекції
+// removeCourse(name) - видаляє курс із колекції
+// updateCourse(oldName, newName) - змінює ім'я на нове
+
+
+
+// function addCourse(name) {
+//   if (courses.includes(name)) {
+//     return "Ви вже маєте такий курс";
+//     alert("Ви вже маєте такий курс");
+//   } else {
+//     courses.push(name);
+//   }
+// }
+
+// addCourse("Express");
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// console.log(addCourse("CSS")); // 'Ви вже маєте такий курс'
+
+// function removeCourse(name){
+//     if(courses.includes(name)){
+//        let idx = courses.indexOf(name);
+//        courses.splice(idx, 1);
+//     }else{
+//         console.log("Курс з таким ім'ям не знайдено");
+//     }
+
+// }
+// removeCourse("Hpluj");
+// console.log(courses);
+const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+function updateCourse(oldName, newName) {
+  if (courses.includes(oldName) && !courses.includes(newName)) {
+    let idx = courses.indexOf(oldName);
+    courses.splice(idx, 1, newName);
+  } else if (!courses.includes(oldName)) {
+    console.log("Курс з таким ім*ям не знайдено");
+  } else {
+    console.log("Ви вже вивчаєте такий курс");
+  }
+}
+updateCourse("HTML", "JavaScript");
+// updateCourse("qwerty", "NestJS");
+// updateCourse("qwerty", "qwe")
+console.log(courses);
