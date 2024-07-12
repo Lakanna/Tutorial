@@ -1380,16 +1380,176 @@
 //   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
 // );
 
-const book = {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    genres: ["historical prose", "adventure"],
-    rating: 8.38,
-  };
-  
-  for (const key in book) {
-    // Ключ
-    console.log(key);
-    // Значення властивості з таким ключем
-    console.log(book[key]);
-  }
+// const book = {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["historical prose", "adventure"],
+//     rating: 8.38,
+//   };
+
+//   for (const key in book) {
+//     // Ключ
+//     console.log(key);
+//     // Значення властивості з таким ключем
+//     console.log(book[key]);
+//   }
+
+// function normalizeInput(input, to) {
+//   let result = input.toLowerCase();
+//   console.log(result);
+//   if (to === "upper") {
+//     result =  input.toUpperCase();
+//       };
+//   return result;
+
+// };
+// let res = normalizeInput("This ISN'T SpaM", "lower")
+// console.log(res);
+// console.log(normalizeInput("This ISN'T SpaM", "upper"));
+
+// let input = "This ISN'T SpaM";
+// let res = input.toLocaleLowerCase();
+// console.log(res);
+
+// function getFileName(file) {
+//   let idx = file.indexOf(".");
+//   if(idx === -1){
+//     return file.slice(0);
+//   }
+//   return file.slice(0, idx);
+// }
+
+// console.log(getFileName("styles.css"));
+// console.log(getFileName("app.js"));
+// console.log(getFileName("app"));
+
+// function calculateTotal(number) {
+//   let total = 0;
+//   for(let i = 0; i <= number; i += 1){
+//     total += i;
+//   }
+//   return total;
+// }
+
+// function calculateEvenTotal(number) {
+//   let total = 0;
+//   for(let i = 1; i <= number; i +=1){
+//     if(i % 2 === 0){
+//       total += i;
+//     }
+//   }
+//   return total;
+// }
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   const totalWord = message.split(" ");
+//   console.log(totalWord);
+//   return totalWord.length * pricePerWord;
+// }
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, fruits.length - 1);
+// const lastThreeEls = fruits.slice(-3);
+// console.log(lastThreeEls);
+
+// function getSlice(array, value) {
+//   let result = [];
+//   let idx = array.indexOf(value);
+//   if(idx !== -1){
+//     result = array.slice(0, idx + 1);
+//   }
+//   return result;
+// }
+
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Jacob"))
+
+// function createArrayOfNumbers(min, max) {
+//   let result = [];
+//   for(let i = min; i <= max; i += 1){
+//     result.push(i);
+//   };
+//   return result;
+// }
+
+// console.log(createArrayOfNumbers(29, 34));
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for(let i = 0; i < order.length; i += 1){
+//     total += order[i]
+//   }
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// function getEvenNumbers(start, end) {
+//   let result = [];
+//   for(let i = start; i <= end; i += 1){
+//     if(i % 2 === 0){
+//       result.push(i);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(getEvenNumbers(3, 11));
+
+// function getCommonElements(array1, array2) {
+//   let result = [];
+//   for (let i = 0; i < array1.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       result.push(array1[i]);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for(const element of order){
+//     total += element;
+//   }
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// function createReversedArray() {
+//   // let arr = Array.from(arguments);
+//   // return arr.toReversed();
+//   let result = [];
+//   for (let i = arguments.length - 1; i >= 0; i -= 1) {
+//     result.push(arguments[i]);
+//   }
+//   return result;
+// }
+
+// console.log(createReversedArray(164, 48, 291));
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[apartment.tags.length - 1];
+
+// console.log(ownerName);
