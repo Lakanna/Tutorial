@@ -1553,3 +1553,59 @@
 // const lastTag = apartment.tags[apartment.tags.length - 1];
 
 // console.log(ownerName);
+
+// const apartment = {
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+//   };
+//   const values = [];
+//   const keys = Object.keys(apartment);
+//   console.log(keys);
+
+//   for(let key of keys){
+//     values.push(apartment[key])
+//   };
+
+//   console.log(values);
+
+//   function getProductPrice(productName) {
+//     const products = [
+//       { name: "Radar", price: 1300, quantity: 4 },
+//       { name: "Scanner", price: 2700, quantity: 3 },
+//       { name: "Droid", price: 400, quantity: 7 },
+//       { name: "Grip", price: 1200, quantity: 9 },
+//     ];
+//     let priceProduct = null;
+
+//     for(product of products){
+//       if(productName === product.name){
+//         priceProduct = product.price;
+//       }
+//     }
+//     return priceProduct;
+//   }
+
+//   console.log(getProductPrice("Scanner"));
+//   console.log(getProductPrice("engine"));
+
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   let result = [];
+   
+//     for (let product of products) {
+//       if (Object.keys(product).includes(propName)){ 
+     
+//       result.push(product[propName]);}
+//     }
+  
+//   return result;}
+
+
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("category"));
