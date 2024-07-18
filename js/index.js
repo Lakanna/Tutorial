@@ -2471,17 +2471,287 @@ const str = "absdabsrgbadgtdswwbetflg";
 //   return result;
 // }
 
-function getAbc(str) {
-  const result = str.split("")
-  .reduce((acc, item) => {
-    if (item in acc) {
-      acc[item] += 1;
-    } else {
-      acc[item] = 1;
-    }
-    return acc;
-  }, {});
-  return result;
-}
+// function getAbc(str) {
+//   const result = str.split("")
+//   .reduce((acc, item) => {
+//     if (item in acc) {
+//       acc[item] += 1;
+//     } else {
+//       acc[item] = 1;
+//     }
+//     return acc;
+//   }, {});
+//   return result;
+// }
 
-console.log(getAbc(str));
+// console.log(getAbc(str));
+
+// class Car {
+//   constructor(brand, model, price) {
+//     this.model = model;
+//     this.brand = brand;
+//     this.price = price;
+//   }
+// }
+
+// console.log(new Car("Audi", "Q3", 36000));
+// console.log(new Car("BMW", "X5", 58900));
+
+// class Car {
+//   static maxPrice = 50000;
+//   #price;
+
+//   constructor(params) {
+//     this.#price = params.price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if(newPrice > Car.maxPrice){
+//       return;
+//     }
+//     this.#price = newPrice;
+//   }
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// class Car {
+//   static #maxPrice = 50000;
+//   static checkPrice(price){
+//     if(price > Car.#maxPrice){
+//       return "Error! Price exceeds the maximum";
+//     }else{
+//       return "Success! Price is within acceptable limits";
+//     }
+//   }
+
+//   constructor(params) {
+//     this.price = params.price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser"
+//   }
+// }
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+//   constructor(params){
+//     super(params.email);
+//     this.access = params.access;
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//   }
+
+//   blacklistedEmails = [];
+
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
+
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+// class Storage{
+//   #items;
+
+//   constructor(items){
+//     this.#items = items;
+//   } 
+
+//   getItems(){
+//     return this.#items;
+//   }
+
+//   addItem(newItem){
+//     this.#items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove){
+//     if(this.#items.includes(itemToRemove)){
+//      const idx = this.#items.indexOf(itemToRemove);
+//      this.#items.splice(idx, 1);
+//     }else{
+//       return "Error. This item not found"
+//     }
+//   }
+// }
+
+
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// storage.removeItem("Scaner");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+
+// class StringBuilder{
+//   #value;
+
+//   constructor(initialValue){
+//     this.#value = initialValue;
+//   }
+
+//   getValue(){
+//     return this.#value;
+//   }
+
+//   padEnd(str){
+//     this.#value += str;
+//   }
+
+//   padStart(str){
+//     this.#value = str + this.#value;
+//   }
+
+//   padBoth(str){
+//     this.#value = str + this.#value + str;
+//   }
+// }
+
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
