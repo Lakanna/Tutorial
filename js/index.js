@@ -2689,7 +2689,7 @@ const str = "absdabsrgbadgtdswwbetflg";
 
 //   constructor(items){
 //     this.#items = items;
-//   } 
+//   }
 
 //   getItems(){
 //     return this.#items;
@@ -2709,7 +2709,6 @@ const str = "absdabsrgbadgtdswwbetflg";
 //   }
 // }
 
-
 // const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 
@@ -2721,7 +2720,6 @@ const str = "absdabsrgbadgtdswwbetflg";
 
 // storage.removeItem("Scaner");
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
-
 
 // class StringBuilder{
 //   #value;
@@ -2755,3 +2753,103 @@ const str = "absdabsrgbadgtdswwbetflg";
 // console.log(builder.getValue()); // "^.^"
 // builder.padBoth("=");
 // console.log(builder.getValue()); // "=^.^="
+
+// class User {
+//     constructor(name, surname){
+//         this.name = name;
+//         this.surname = surname;
+//     }
+
+//     getFullname(){
+//         return `${this.name} ${this.surname}`
+//     }
+// }
+
+// class Student extends User{
+//     constructor(name, surname, year){
+//         super(name, surname);
+//         this.year = year;
+//     }
+
+//     getCours(){
+//         const currentYear = new Date().getFullYear();
+//         return `Current cours - ${currentYear - this.year}`
+//     }
+// }
+
+// let student1 = new Student("Pedro", "Salvares", 2022);
+
+// console.log(student1.getCours());
+
+// *******Task-4******* \\
+// Необхідно створити клас BankAccount, який представляє банківський рахунок. Клас повинен мати приватну
+//  властивість balance, яка представляє баланс рахунку. Клас повинен також мати публічні методи deposit та withdraw,
+//   які дозволяють здійснювати операції з депозитом та зняттям коштів з рахунку. При цьому balance повинна
+//   бути доступна лише в межах класу BankAccount та його приватних методів.
+
+// class BankAccount {
+//   #balance;
+//   constructor() {
+//     this.#balance = 0;
+//   }
+
+//   deposit(sum){
+//     this.#balance += sum;
+//   };
+
+//   withdraw(sum){
+//     if(sum > this.#balance){
+//        return console.log("Недостатньо коштів на рахунку");}
+//      this.#balance -= sum;
+
+// }}
+
+// const instance = new BankAccount()
+// instance.deposit(100)
+// instance.deposit(1200)
+// instance.withdraw(1500)
+// console.log(instance);
+
+// Яким буде результат виклику функції?
+
+// function f() {
+//   console.log(this.name);
+// }
+// const foo = f.bind({ name: "Іван" }).bind({ name: "Juan" });
+// foo();
+
+// Функція askPassword приймає 2 колбека і викливає 1 іх них в задежності від пароля
+
+// function askPassword(ok, fail) {
+
+//     let password = prompt("Password?");
+
+//     if(password === "qwerty111"){
+//         ok();
+//     }else{
+//         fail();
+//     }
+// }
+
+//Напиши функцію конструктор User для створення користувача з такими властивостями
+//a. userName - ім'я, рядок
+//b. age - вік, число
+//c. numbersOfPost - кількість постів, число
+//d. клас очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+//Додай метод getInfo(), який повертає рядок:
+//`Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+// class User {
+//   constructor({userName, age, numberOfPost}) {
+//     this.userName = userName;
+//     this.age = age;
+//     this.numberOfPost = numberOfPost;
+//   }
+
+//   getInfo(){
+//     return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numberOfPost}  публікацій`
+//   }
+// }
+
+
